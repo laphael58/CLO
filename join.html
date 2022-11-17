@@ -61,7 +61,7 @@
                               <li class="nav-item ">
                                  <a class="nav-link" href="index.html">Home</a>
                               </li>
-                              <li class="nav-item active">
+                              <li class="nav-item">
                                  <a class="nav-link" href="about.html">About</a>
                               </li>
                               <li class="nav-item">
@@ -70,7 +70,7 @@
                               <li class="nav-item">
                                  <a class="nav-link" href="shop.html">Shop</a>
                               </li>
-                              <li class="nav-item">
+                              <li class="nav-item active">
                                  <a class="nav-link" href="contact.html">Contact Us</a>
                               </li>
                               <li class="nav-item d_none login_btn">
@@ -89,79 +89,115 @@
                </div>
             </div>
          </div>
-      </header>
-<jsp:include page="/template/header.jsp"></jsp:include>
-
-        <div class="container-600">
+        <head>
+         <meta charset="utf-8">
+         <title>회원가입</title>
+         <link rel="stylesheet" type="text/css" href="css/default2.css">
+         <link rel="stylesheet" type="text/css" href="css/style2.css">
+         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+         <script>
+         $(document).ready(function(){
+            
+            $(".open").on('click',function(){
+               $(".popup").show();
+               $(".dim").show();
+            });
+            $(".popup .close").on('click',function(){
+               $(this).parent().hide();
+               $(".dim").hide();
+            });
+         });
+         </script>
+         </head>
+         <DIV style="TEXT-ALIGN: center">
+         <body>
             <div style = "padding: 50px 0px 0px 0px;"></div>
-	        <div class="row">
-		        <h2>회원 정보 입력</h2>
-	        </div>
-	        <form action="join.kh" method="post">
-		        <div class="row text-left">
-			        <label>아이디</label>
-			        <input type="text" name="memberId" required class="form-input form-input-underline">
-		        </div>
-		        <div class="row text-left">
-			        <label>비밀번호</label>
-			        <input type="password" name="memberPw" required class="form-input form-input-underline">
-		        </div>
-		        <div class="row text-left">
-			        <label>닉네임</label>
-			        <input type="text" name="memberNick" required class="form-input form-input-underline">
-		        </div>
-		        <div class="row text-left">
-			        <label>생년월일</label>
-			        <input type="date" name="memberBirth" required class="form-input form-input-underline">
-		        </div>
-		        <div class="row text-left">
-			        <label>전화번호</label>
-			        <input type="tel" name="memberPhone" required class="form-input form-input-underline">
-		        </div>
-		        <div class="row text-left">
-			        <label>이메일</label>
-			        <input type="email" name="memberEmail" required class="form-input form-input-underline">
-		        </div>
-		        <div class="row">
-			        <input type="submit" value="회원가입" class="form-btn form-btn-positive">
-		        </div>
-	        </form>
+            <a href="#a" class="open" style="font-size:200%">팝업열기</a>
+            <div class="popup">
+               <h2> 회원가입</h2>
+               <div class="con">
+                  <table class="type1">
+                  <caption>
+                     <details class="hide">
+                        <summary>회원가입 폼</summary>
+                        <div>이름, 아이디, 비밀번호</div>
+                     </details>
+                  </caption>
+                  <colgroup>
+                  <col style="width: 111px">
+                  <col>
+                  </colgroup>
+                  <tbody>
+                  <tr>
+                     <th><label for="txt1">이름</label><span>*<em class="hide">필수입력</em></span></th>
+                     <td><input type="text" id="txt1" placeholder="이름을 입력해 주세요."></td>
+                  </tr>
+                  <tr>
+                     <th><label for="txt2">아이디</label><span>*<em class="hide">필수입력</em></span></th>
+                     <td><input type="text" id="id" placeholder="아이디를 입력해주세요."></td>
+                  </tr>
+                  <tr>
+                     <th><label for="txt3">비밀번호</label><span>*<em class="hide">필수입력</em></span></th>
+                     <td><input type="password" id="pwd" placeholder="비밀번호를 입력해주세요."></td>
+                  </tr>
+                  </tbody>
+                  </table>
+                  <div class="agree">
+                     <input type="checkbox" id="chk1_4"><label for="chk1_4"><span>[필수]</span>개인정보 수집 및 이용 동의</label>
+                     <a href="#a" class="view">전문보기</a>
+                  </div>
+               </div>
+               <div class="txt_center">
+                  <a href="#a" class="btn_type1">가입하기</a>
+               </div>
+               <a href="#a" class="close">닫기</a>
+            </div>
+            <div class="dim"></div>
             <div style = "padding: 50px 0px 0px 0px;"></div>
-        </div>
+         </body>
+      </DIV>
 
-        <jsp:include page="/template/footer.jsp"></jsp:include>
-
-<footer>
-    <div class="footer">
-       <div class="container">
-          <div class="row">
-             <div class="col-md-8 offset-md-2">
-                <ul class="location_icon">
-                   <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a><br> @pjh051016</li>
-                   <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a><br> pjh051016@naver.com</li>
-                   <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a><br> teampiclo@naver.com</li>
-                </ul>
-             </div>
-          </div>
-       </div>
-       <div class="copyright">
-          <div class="container">
-             <div class="row">
-                <div class="col-md-12">
-                   <p>© 2023 All Rights Reserved. Design by<a href="https://teampiclo.netlify.app/index.html"> Free Html Templates</a></p>
-                </div>
-             </div>
-          </div>
-       </div>
-    </div>
- </footer>
- <!-- end footer -->
- <!-- Javascript files-->
- <script src="js/jquery.min.js"></script>
- <script src="js/popper.min.js"></script>
- <script src="js/bootstrap.bundle.min.js"></script>
- <script src="js/jquery-3.0.0.min.js"></script>
- <!-- sidebar -->
- <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
- <script src="js/custom.js"></script>
+      <!-- end contact section -->
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-8 offset-md-2">
+                     <ul class="location_icon">
+                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a><br> @pjh051016</li>
+                        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a><br> pjh051016@naver.com</li>
+                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a><br> teampiclo@naver.com</li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>© 2023 All Rights Reserved. Design by<a href="https://teampiclo.netlify.app/index.html"> Free Html Templates</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script>
+         // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+         // Australia.
+         </script>
+      <!-- google map js -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+      <!-- end google map js --> 
+   </body>
 </html>

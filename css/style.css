@@ -44,6 +44,8 @@ body {
      font-family: 'Poppins', sans-serif;
      line-height: 1.80857;
      font-weight: normal;
+     margin: 0;
+     padding: 0;
 }
 
 a {
