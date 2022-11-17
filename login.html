@@ -90,7 +90,6 @@
             </div>
          </div>
       </header>
-      <div style = "padding: 50px 0px 0px 0px;"></div>
       <html lang="ko">
         <head>
         <meta charset="UTF-8">
@@ -102,6 +101,7 @@
         </head>
         <body>
         <section class="login">
+         <div style = "padding: 50px 0px 0px 0px;"></div>
             <h2>로그인</h2>
             <ul>
             <li><input type="text" placeholder="아이디" title="아이디입력"></li>
@@ -112,11 +112,32 @@
             <div>
             <ul>
             <li><a href="join.html">회원가입</a></li>
-            <li><a href="">아이디 찾기</a></li>
-            <li><a href="">비밀번호 찾기</a></li>
+            <a href="javascript:kakaoLogin();"><img src="https://www.gb.go.kr/Main/Images/ko/member/certi_kakao_login.png" style="height:60px;width:auto;"/></a>
+            <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+            <script>
+                //db12dccb23c1267f3a036be976c65309
+                window.Kakao.init("db12dccb23c1267f3a036be976c65309");
+        
+                function kakaoLogin() {
+                    window.Kakao.Auth.login({
+                        scope:'profile_nickname, profile_image, account_email, gender',
+                        success: function(authObj) {
+                            console.log(authObj);
+                            window.Kakao.API.request({
+                                url:'/v2/user/me',
+                                success: res => {
+                                    const kako_account = res.kakao_account;
+                                    console.log(kakao_account);
+                                }
+                            });
+                        }
+                    });
+                }
+            </script>
             </ul>
             </div>
             </section>
+            <div style = "padding: 0px 0px 100px 0px;"></div>
         </body>
        <div style = "padding: 400px 0px 0px 0px;">
        </div>
