@@ -61,13 +61,13 @@
                               <li class="nav-item ">
                                  <a class="nav-link" href="index.html">Home</a>
                               </li>
-                              <li class="nav-item">
+                              <li class="nav-item active">
                                  <a class="nav-link" href="about.html">About</a>
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="glasses.html">Our Glasses</a>
                               </li>
-                              <li class="nav-item active">
+                              <li class="nav-item">
                                  <a class="nav-link" href="shop.html">Shop</a>
                               </li>
                               <li class="nav-item">
@@ -90,63 +90,78 @@
             </div>
          </div>
       </header>
-      <!-- end header inner -->
-      <!-- end header -->
-      <!-- Our shop section -->
-      <div id="about" class="shop">
-         <div class="container-fluid">
-            <div class="row">
-               <div class="col-md-5">
-                  <div  class="shop_img">
-                     <figure><img src="images/Clothes.png" alt="#"/></figure>
-                  </div>
-               </div>
-               <div class="col-md-7 padding_right0">
-                  <div class="max_width">
-                     <div class="titlepage">
-                        <h2>Best Clothes  At Our shop</h2>
-                        <p>Project 'CLO'</p>
-                        <a class="read_more" href="#">Shop Now</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- end Our shop section -->
-      <!--  footer -->
-      <footer>
-         <div class="footer">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-8 offset-md-2">
-                     <ul class="location_icon">
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a><br> @pjh051016</li>
-                        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a><br> pjh051016@naver.com</li>
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a><br> teampiclo@naver.com</li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="copyright">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-12">
-                        <p>© 2023 All Rights Reserved. Design by<a href="https://teampiclo.netlify.app/index.html"> Free Html Templates</a></p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </footer>
-      <!-- end footer -->
-      <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script>
-      <script src="js/popper.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery-3.0.0.min.js"></script>
-      <!-- sidebar -->
-      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="js/custom.js"></script>
-   </body>
+<jsp:include page="/template/header.jsp"></jsp:include>
+
+        <div class="container-600">
+            <div style = "padding: 50px 0px 0px 0px;"></div>
+	        <div class="row">
+		        <h2>회원 정보 입력</h2>
+	        </div>
+	        <form action="join.kh" method="post">
+		        <div class="row text-left">
+			        <label>아이디</label>
+			        <input type="text" name="memberId" required class="form-input form-input-underline">
+		        </div>
+		        <div class="row text-left">
+			        <label>비밀번호</label>
+			        <input type="password" name="memberPw" required class="form-input form-input-underline">
+		        </div>
+		        <div class="row text-left">
+			        <label>닉네임</label>
+			        <input type="text" name="memberNick" required class="form-input form-input-underline">
+		        </div>
+		        <div class="row text-left">
+			        <label>생년월일</label>
+			        <input type="date" name="memberBirth" required class="form-input form-input-underline">
+		        </div>
+		        <div class="row text-left">
+			        <label>전화번호</label>
+			        <input type="tel" name="memberPhone" required class="form-input form-input-underline">
+		        </div>
+		        <div class="row text-left">
+			        <label>이메일</label>
+			        <input type="email" name="memberEmail" required class="form-input form-input-underline">
+		        </div>
+		        <div class="row">
+			        <input type="submit" value="회원가입" class="form-btn form-btn-positive">
+		        </div>
+	        </form>
+            <div style = "padding: 50px 0px 0px 0px;"></div>
+        </div>
+
+        <jsp:include page="/template/footer.jsp"></jsp:include>
+
+<footer>
+    <div class="footer">
+       <div class="container">
+          <div class="row">
+             <div class="col-md-8 offset-md-2">
+                <ul class="location_icon">
+                   <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a><br> @pjh051016</li>
+                   <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a><br> pjh051016@naver.com</li>
+                   <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a><br> teampiclo@naver.com</li>
+                </ul>
+             </div>
+          </div>
+       </div>
+       <div class="copyright">
+          <div class="container">
+             <div class="row">
+                <div class="col-md-12">
+                   <p>© 2023 All Rights Reserved. Design by<a href="https://teampiclo.netlify.app/index.html"> Free Html Templates</a></p>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </footer>
+ <!-- end footer -->
+ <!-- Javascript files-->
+ <script src="js/jquery.min.js"></script>
+ <script src="js/popper.min.js"></script>
+ <script src="js/bootstrap.bundle.min.js"></script>
+ <script src="js/jquery-3.0.0.min.js"></script>
+ <!-- sidebar -->
+ <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+ <script src="js/custom.js"></script>
 </html>
